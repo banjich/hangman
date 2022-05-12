@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+  margin-top: 30px;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #cccccc;
+}
+
+header {
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+input {
+  border: none;
+}
+
+.secret-word {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 30px;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #cccccc;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.play-again {
+  background-color: #f2c417;
+  font-weight: bolder;
+  font-size: large;
+  margin-top: 20px;
+  border-radius: 8px;
+  height: 36px;
+  width: 160px;
+}
+
+h1 {
+  color: #f2c417;
+}
+
+.solution {
+  font-size: 22px;
+}
+
+.wrong-letters {
+  font-size: 20px;
+}
