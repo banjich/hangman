@@ -25,19 +25,23 @@ const Game = () => {
   }, [fetchedWord]);
 
   let secretWord = [...fetchedWord];
+  console.log(secretWord);
 
   useEffect(() => {
     const onKeyDown = (e) => {
       const { key, keyCode } = e;
       if (keyCode >= 65 && keyCode <= 90 && gameActive) {
         var letter = key.toUpperCase();
-
         if (secretWord.includes(letter)) {
           if (!guessedLetters.includes(letter)) {
             setGuessedLetters([...guessedLetters, letter]);
             setMessage('');
-            winCounter = winCounter + 1;
-            if (winCounter >= secretWord.length) {
+            for (let i = 0; i < secretWord.length; i++) {
+              if (letter.includes(secretWord[i])) {
+                winCounter = winCounter + 1;
+              }
+            }
+            if (winCounter === secretWord.length) {
               setMessage('YOU WON!');
               setGameActive(false);
             }
